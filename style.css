@@ -13,33 +13,36 @@
   margin: 0;
   box-sizing: border-box;
 }
-
   html, body {
   height: 100%;
   width: 100%;
   background-color: var(--dark-color);
-  
-
-
 }
 
-main {
+.main-hero {
     background-image: url("assets/images/netflix-india-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 80vh;
+    height: 100vh;
     position: relative;
-    
 }
 
 .box {
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
-    opacity: 0.6;
+    opacity: 0.75;
     background-color: black;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 nav {
@@ -47,8 +50,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    max-width: 1440px;
-    padding: 20px 40px;
+    max-width: 1280px;
+    padding: 20px;
     position: relative;
     z-index: 10;
     /* background-color: wheat; */
@@ -56,7 +59,7 @@ nav {
 }
 
 .logo {
-    width: 180px;
+    width: 150px;
     color: red;
 }
 .menu i {
@@ -75,7 +78,10 @@ nav {
 }
 
 .hero {
-    height: calc(80vh - 100px);
+    /* Learning */
+    /* CSS calc function */
+    height: calc(100vh - 100px);
+
     max-width: 600px;
     margin: auto;
     padding: 0;
@@ -95,11 +101,19 @@ nav {
     letter-spacing: -1px;
     font-weight: 800;
     text-align: center;
+    margin-top: 200px;
     margin-bottom: 20px;
 }
 
-.hero h2, .hero p {
-    font-size: 1.2rem;
+.hero h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1rem;
     font-weight: 400;
     text-align: center;
     margin-bottom: 20px;
@@ -138,9 +152,8 @@ input {
     margin-right: 10px;
     font-size: 1rem;
 }
-
-
-
+/* Learning */
+/* Placeholder Properties */
 input::placeholder {
     color: var(--light-color);
     opacity: 0.8;
@@ -170,4 +183,130 @@ input::placeholder {
     width: 100%;
     height: 5px;
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+    width: 100%;
+    /* background-color: var(--primary-color); */
+
+    /* Learning */
+    /* ✅ Effect: Top 20% is puple overlay, bottom 80% is black overlay. */
+    background: linear-gradient(to bottom,
+    rgba(13, 0, 20, 0.276) 20%,
+    rgba(0, 0, 0, 0.5) 100%);
+}
+
+.trending, .more-reason {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1280px;;
+    padding: 40px 20px;
+    position: relative;
+    color: var(--light-color);
+    font-family: var(--font-secondary);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1280px;
+    margin: auto;
+    gap: 20px;
+}
+
+.card {
+    /* Learning */
+    /* What this does:
+    **  flex: 1 1 200px; → each card tries to be at least 200px wide, but will shrink/grow with the container.
+    **  max-width: 200px; → prevents them from getting too huge on large screens.
+    **  img { width: 100%; height: auto; } → image scales with card width responsively. */
+
+    flex: 1 1 200px; /* grow, shrink, min size */
+    max-width: 200px; /* optional limit */
+
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Material Design "standard" easing */
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card h3 {
+    display: inline-block;
+    position: absolute;
+    top: 70%;
+    left: -16px;
+    transform: translateY(-50%);
+    font-size: 6vw;
+    color: var(--primary-color);
+    /* Learning */
+    /* Webkit Text Stroke */
+    -webkit-text-stroke: 2px var(--light-color);
+}
+
+.reason-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.reason-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    color: var(--light-color);
+    background: linear-gradient(
+        135deg, 
+        rgba(99, 54, 81, 0.5) 0%,   /* Netflix red */
+        rgba(94, 0, 149, 0.25) 50%,   /* Netflix red */
+        rgba(102, 52, 52, 0.25) 100%     /* near-black bottom */
+    );
+    
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Material Design "standard" easing */
+}
+
+.reason-card:hover {
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.reason-card h3 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+}
+
+.reason-card  p {
+    font-size: 1rem;
+}
+
+.reason-card p:last-child {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end; /* right-align horizontally */
+}
+
+.reason-card > p > i {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: var(--primary-color);
 }

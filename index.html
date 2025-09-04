@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project01-NetFlix-Clone-HTML-CSS</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
   </head>
   <body>
-    <!-- <header>
-        <nav>
-        <img src="assets/images/logo.png" alt="logo" class="logo">
-        Netflix Menu
-    </nav>
-    </header> -->
-
-    <main>
+    <header>
       <nav>
         <span
           ><img
@@ -23,29 +23,163 @@
             src="assets/images/logo.svg"
             alt="netflix logo"
             width="100px"
-        /></span>
+          />
+        </span>
         <div class="menu">
-          <button class="language"><i class="fa-solid fa-language"></i> English</button>
+          <button class="language">
+            <i class="fa-solid fa-language"></i> English
+          </button>
           <button class="btn-red small">Sign In</button>
         </div>
       </nav>
-      <div class="box"></div>
-      <div class="hero">
-        <h1>Unlimited movies, TV shows and more.</h1>
-        <h2>Starts at ₹149. Cancel at any time.</h2>
-        <p>
-          Ready to watch? Enter your email to create or restart your membership.
-        </p>
-        <div class="input-box">
+    </header>
+    <main>
+      <div class="main-hero">
+        <div class="box"></div>
+        <div class="hero">
+          <h1>Unlimited movies, TV shows and more.</h1>
+          <h2>Starts at ₹149. Cancel at any time.</h2>
+          <p>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
+          <div class="input-box">
             <form class="hero-form" action="">
-                <input class="input-email" id="email" type="email" placeholder="Email address" />
-                <button class="btn-red large" type="submit">Get Started</button>
+              <input
+                class="input-email"
+                id="email"
+                type="email"
+                placeholder="Email address"
+              />
+              <button class="btn-red large" type="submit">
+                Get Started <i class="fa-solid fa-chevron-right"></i>
+              </button>
             </form>
+          </div>
         </div>
       </div>
-      <div class="seperator">
 
-      </div>
+      <div class="seperator"></div>
+      <section class="content">
+        <div class="trending">
+          <h2>Trending Now</h2>
+          <div class="card-container">
+            <div class="card card1">
+              <h3>1</h3>
+              <img
+                src="assets/Netflix-India-2025/card1.webp"
+                alt="trending-1"
+              />
+            </div>
+            <div class="card card2">
+              <h3>2</h3>
+              <img
+                src="assets/Netflix-India-2025/card2.webp"
+                alt="trending-2"
+              />
+            </div>
+            <div class="card card3">
+              <h3>3</h3>
+              <img
+                src="assets/Netflix-India-2025/card3.webp"
+                alt="trending-3"
+              />
+            </div>
+            <div class="card card4">
+              <h3>4</h3>
+              <img
+                src="assets/Netflix-India-2025/card4.webp"
+                alt="trending-4"
+              />
+            </div>
+            <div class="card card5">
+              <h3>5</h3>
+              <img
+                src="assets/Netflix-India-2025/card5.webp"
+                alt="trending-5"
+              />
+            </div>
+            <div class="card card6">
+              <h3>6</h3>
+              <img
+                src="assets/Netflix-India-2025/card6.webp"
+                alt="trending-6"
+              />
+            </div>
+            <div class="card card7">
+              <h3>7</h3>
+              <img
+                src="assets/Netflix-India-2025/card7.webp"
+                alt="trending-7"
+              />
+            </div>
+            <div class="card card8">
+              <h3>8</h3>
+              <img
+                src="assets/Netflix-India-2025/card8.webp"
+                alt="trending-8"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="more-reason">
+          <h2>More reasons to join</h2>
+          <div class="reason-card-container">
+            <div class="reason-card">
+              <h3>Enjoy on your TV</h3>
+              <p>
+                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+                Blu-ray players and more.
+              </p>
+              <p><i class="fa-solid fa-desktop"></i></p>
+            </div>
+            <div class="reason-card">
+              <h3>Download your shows to watch offline</h3>
+              <p>
+                Save your favorites easily and always have something to watch.
+              </p>
+              <p><i class="fa-solid fa-download"></i></p>
+            </div>
+            <div class="reason-card">
+              <h3>Watch everywhere</h3>
+              <p>
+                Stream unlimited movies and TV shows on your phone, tablet,
+                laptop, and TV without paying more.
+              </p>
+              <p><i class="fa-solid fa-ticket"></i></i></p>
+            </div>
+            <div class="reason-card">
+              <h3>Create profiles for kids</h3>
+              <p>
+                Send kids on adventures with their favorite characters in a
+                space made just for them—free with your membership.
+              </p>
+              <p><i class="fa-solid fa-child"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <div class="faq-question">
+              <h3>What is Netflix?</h3>
+              <p>
+                Netflix is a streaming service that offers a wide variety of
+                award-winning TV shows, movies, anime, documentaries and more on
+                thousands of internet-connected devices.
+              </p>
+            </div>
+            <div class="faq-question">
+              <h3>How much does Netflix cost?</h3>
+              <p>
+                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+                streaming device, all for one fixed monthly fee. Plans range from
+                ₹ 149 to ₹ 649 a month. No extra costs, no contracts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
