@@ -419,3 +419,152 @@ input::placeholder {
   color: var(--color-dark-light);
   font-size: 0.9rem;
 }
+
+
+
+/* -------------------------
+   Tablet (≤ 1024px)
+-------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 40px; /* consistent baseline */
+  }
+
+  nav {
+    padding: 16px 20px;
+  }
+
+  .hero {
+    padding: var(--section-padding);
+    height: auto;
+  }
+
+  h1 {
+    font-size: 6vw;
+    margin-top: 120px;
+  }
+
+  .hero h2,
+  .hero p {
+    padding: 0;
+  }
+
+  .hero-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: var(--section-padding);
+  }
+
+  .hero-form input,
+  .hero-form button {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+
+  /* ✅ Align all sections */
+  .trending,
+  .more-reason,
+  .faq-container,
+  .footer-container {
+    padding: var(--section-padding);
+  }
+
+  /* ✅ Reset inner headings so they align */
+  .trending h2,
+  .more-reason h2,
+  .faq-container h2 {
+    margin: 0 0 20px 0; /* remove extra offset */
+    padding: 0;         /* kill wrong padding */
+  }
+
+  .reason-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .card-container {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .footer-links ul {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.9rem;
+  }
+}
+
+
+/* -------------------------
+   Mobile (≤ 768px)
+-------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 32px;
+  }
+
+  .main-hero {
+    height: auto;            /* ✅ shrink hero height */
+    min-height: 80vh;        /* optional: keep enough height */
+  }
+
+  .hero {
+    height: auto;            /* override calc(100vh - 100px) */
+    padding: var(--section-padding);
+    margin-bottom: 20px;     /* controlled gap before next section */
+  }
+
+
+  h1 {
+    font-size: 7vw;
+    margin-top: 150px;        /* ✅ smaller top margin */
+    margin-bottom: 16px;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: var(--section-padding);
+    margin-bottom: 0; /* no extra gap */
+  }
+
+  .hero-form input,
+  .hero-form button {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  /* keep section padding consistent */
+  .trending,
+  .more-reason,
+  .faq-container,
+  .footer-container {
+    padding: var(--section-padding);
+  }
+
+  .trending h2,
+  .more-reason h2,
+  .faq-container h2 {
+    margin: 0 0 16px 0;
+    padding: 0;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
